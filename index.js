@@ -74,15 +74,8 @@ Client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === 'ping') {
 
-        Client.commands.get('ping').execute(message, args);
-
-    } else if (command == 'hello') {
-
-        message.reply('Hi!');
-
-    } else if (command == 'xp') {
+    if (command == 'xp') {
 
         message.channel.send(message.author.username + ' now has ' + userStats.xp);
 
