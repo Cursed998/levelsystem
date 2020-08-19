@@ -69,7 +69,7 @@ Client.on('message', message => {
     if (command == 'xp') {
 
         message.channel.send(message.author.username + ' now has ' + userStats.xp);
-
+        message.channel.send('You need ' + userStats.xpToNextLevel + 'more xp to go to next level');
     } else if (command == 'level') {
         message.channel.send(message.author.username + ' now has ' + userStats.level);
     } else if (command == 'profile') {
