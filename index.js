@@ -50,7 +50,7 @@ Client.on('message', message => {
         if (userStats.xp >= xpToNextLevel) {
             userStats.level++;
             userStats.xp = userStats.xp = -xpToNextLevel;
-            message.reply('You has reached level ' + userStats.level);
+            message.reply('Congrats You has reached level ' + userStats.level);
         }
 
         jsonfile.writeFileSync('stats.json', stats);
