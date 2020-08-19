@@ -72,6 +72,16 @@ Client.on('message', message => {
 
     } else if (command == 'level') {
         message.channel.send(message.author.username + ' now has ' + userStats.level);
+    } else if (command == 'profile') {
+            const embed = new Discord.MessageEmbed()
+                .setTitle('User information')
+                .addField('User Name', message.author.username)
+                .addField('Level:', userStats.level)
+                .addField('Current Server', message.guild.name)
+                .setColor(0xF4D03F)
+                .setThumbnail(message.author.displayAvatarURL())
+                .setFooter('Dont forget to subscribe by youtube channel')
+            message.channel.send(embed);
     }
 })
 
